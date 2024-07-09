@@ -134,7 +134,7 @@ Variable batchnorm(
       {DNNL_ARG_MEAN, meanMemory.getMemory()},
       {DNNL_ARG_VARIANCE, varMemory.getMemory()},
       {DNNL_ARG_DST, outputMemory.getMemory()},
-      {DNNL_ARG_SCALE_SHIFT, weightsMemory.getMemory()}};
+      {DNNL_ARG_DIFF_SHIFT, weightsMemory.getMemory()}};
 
   // Execute
   std::vector<dnnl::primitive> network;
